@@ -71,7 +71,7 @@ concurrency:
 jobs:
   build:
     name: 
-    runs-on: macos-latest
+    runs-on: macos-13
     permissions:
       contents: write
 
@@ -81,6 +81,9 @@ jobs:
         with:
           path: main
           submodules: recursive
+
+      - name: Select specific Xcode version
+        run: sudo xcode-select -s /Applications/Xcode_14.3.1.app/Contents/Developer
 
       - name: Hide sensitive inputs
         uses: levibostian/action-hide-sensitive-inputs@v1
