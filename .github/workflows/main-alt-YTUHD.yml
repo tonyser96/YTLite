@@ -1,5 +1,4 @@
-name: Create YouTube Plus app
-
+name: Create YouTube Plus app - alt YTUHD
 on:
   workflow_dispatch:
     inputs:
